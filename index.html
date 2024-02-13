@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Responsive Image Slider</title>
+</head>
+
+<body>
+    <div class="image-slider">
+        <div class="Product-images active">
+            <img src="image/pic1.jpg" alt="">
+            <div class="content">
+                <h2>Cool Boat HeadPhone</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, repellendus.</p>
+                <button id="btnBuynow">Buy now</button>
+            </div>
+        </div>
+        <div class="Product-images">
+            <img src="image/pic2.jpg" alt="">
+            <div class="content">
+                <h2>MI Phone</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, repellendus.</p>
+                <button id="btnBuynow">Buy now</button>
+            </div>
+        </div>
+        <div class="Product-images">
+            <img src="image/pic3.jpg" alt="">
+            <div class="content">
+                <h2>DSLR 5600D</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, repellendus.</p>
+                <button id="btnBuynow">Buy now</button>
+            </div>
+        </div>
+        <div class="Product-images">
+            <img src="image/pic4.jpg" alt="">
+            <div class="content">
+                <h2>CHAI LOVE</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit error dolore repudiandae ullam quia et?<p>
+                <button id="btnBuynow">Buy now</button>
+            </div>
+        </div>
+        <div class="Product-images">
+            <img src="image/pic5.jpg" alt="">
+            <div class="content">
+                <h2>Codding With Coffie</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, repellendus.</p>
+                <button id="btnBuynow">Buy now</button>
+            </div>
+        </div>
+        <div class="Product-images">
+            <img src="image/pic6.jpg" alt="">
+            <div class="content">
+                <h2>NESCAFE</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quasi numquam pariatur inventore maxime vitae?</p>
+                <button id="btnBuynow">Buy now</but0ton>
+            </div>
+        </div>
+        <div class="dots">
+            <div class="btn active"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+        </div>
+    </div>
+
+    <script>
+        let slides = document.querySelectorAll(".Product-images")
+        let btns = document.querySelectorAll(".btn")
+        let currentSlide = 1;
+
+        var manualNav = function (manual) {
+            slides.forEach((ProductImages) => {
+                ProductImages.classList.remove("active");
+
+            btns.forEach((btn) => {
+                btn.classList.remove("active");
+                slides[manual].classList.add("active");
+            });
+        });
+        button[manual].classList.add("active");
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                manualNav(i);
+                currentSlide = i;
+            });
+        });
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
